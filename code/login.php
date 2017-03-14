@@ -34,43 +34,28 @@
 					<td valign="top" width="440">
 
 <!-- new table for showing the multiple server info -->				
-						<table cellspacing="0" cellpadding="0" class="content" span="100%" >
-Content goes here.
-
-<?php /*
-
-	
-		include("includes/sqlconnect.inc");
-
-		$allnews = mysql_query("SELECT * FROM news ORDER BY news_id DESC");
-		$num_rows = mysql_num_rows($allnews);
-		
-		while($row = mysql_fetch_array( $allnews )){
-
-						$newstitle=$row['news_title'];
-						$newsauthor=$row['news_author'];
-			  		$newsbody=$row['news_body'];
-							$newsdate=$row['news_date'];
+						<table cellspacing="0" cellpadding="0" class="content">
+							<?php
 							
-							echo '<tr width="100%"><td colspan="2"><div class="title">'.$newstitle.'</div></td><tr>';
-							echo '<tr width="100%"><td><div class="content">Written By: '.$newsauthor.'</td></tr>';
-							echo '<tr width="100%"><td> Sibmitted On: '.$newsdate.'</td></tr>';
-							echo '<tr width="100%"><td colspan="2"><div class="content"><br>'.$newsbody.'<Br><br></div></td><tr>';
-				}
-
-
-*/?>
-
-
-
-							<tr><td></td></tr>
+							if(isset($_SESSION['authfail'])){
+								if($_SESSION['authfail'] == 1){
+								echo '<tr><td><div class="subtitle">Login Failed, Please try Again</div><br></td></tr>';
+								}elseif($_SESSION['authfail'] == 2){
+								echo '<tr><td><div class="subtitle">You do not have admin rights, please login as an Admin</div><br></td></tr>'; 
+								}							
+							}												
+							?>						
+						
+							<tr><td><div class="title">Please Login<Br><br></div></td></tr>
+							<tr><td><div>
+							<form name="login" method="post" action="utilprogs/checklogin.php">
+								Username: <input name="username" type="text" id="username"><br>
+								Password: <input name="password" type="password" id="password"><br>
+								<input type="submit" name="Submit" value="Login">
+							</form>
+							</div></td></tr>
 							</td></tr>
-							<tr><td>
-								
-							
-							
-							
-							</td></td></tr>
+							<tr><td><br></td></tr>
 						</table>							
 						
 					</td>				
