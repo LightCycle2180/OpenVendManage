@@ -1,31 +1,55 @@
-         <div class="title">Collections</div>
-         <div>
-         <ul>
-             <li><a href="collections/prekit.php">Pre-Kit</a></li>
-	     <li><a href="collections/checkin.php">Check In</a></li>
-             <li><a href="collections/report.php">Report Issues</a></li>
-         </div>
-         <br>
-			<div class="title">Service</div>
-         <div>
-         <ul>
-             <li><a href="service/calendar.php">Calendar</a></li>             
-             <li><a href="service/issues.php">Issues</a></li>
-          </ul>
-         </div>
-         <div class="title">Office</div>
-         <div >
-         <ul>
-	      <li><a href="office/stock.php">Stock</a></li>
-	      <li><a href="office/inventory.php">Inventory</a></li>
-         </ul>
-         </div>
-
-	<?php/*
+        <?php
+        $flag = false;
 	if(isset($_SESSION['rights'])){
-		if($_SESSION['rights'] == "admin"){
+		if($_SESSION['rights'] == "0"){
+			echo "Admin Rights Active";
 			include ("adminsidenav.php");
+			include ("collectionsidenav.php");
+			include ("servicesidenav.php");
+			include ("officesidenav.php");
+			$flag = true;
 		}
-	}					
+	}
 	
-	*/?>
+	if(isset($_SESSION['rights'])){
+		if($_SESSION['rights'] == "1"){
+			echo "Manager Rights Active";
+			include ("collectionsidenav.php");
+			include ("servicesidenav.php");
+			include ("officesidenav.php");
+			$flag = true;
+		}
+	}
+	if(isset($_SESSION['rights'])){
+		if($_SESSION['rights'] == "2"){
+			echo "Collection Rights Active";
+			include ("collectionsidenav.php");
+			$flag = true;
+		}
+	}
+	if(isset($_SESSION['rights'])){
+		if($_SESSION['rights'] == "3"){
+			echo "Service Rights Active";
+			include ("servicesidenav.php");
+			$flag = true;
+		}
+	}
+	if(isset($_SESSION['rights'])){
+		if($_SESSION['rights'] == "4"){
+			echo "Office Rights Active";
+			include ("officesidenav.php");
+			$flag = true;
+		}
+	}
+	if(isset($_SESSION['rights'])){
+		if($_SESSION['rights'] > "4"){
+			echo "Not a valid user!<br>Check logs for potential hack!";
+			$flag = true;
+		}
+	}
+		if($flag == false){
+			include ("loginsidenav.php");
+	}
+	
+	
+	?>

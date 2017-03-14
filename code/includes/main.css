@@ -5,7 +5,7 @@ table.main {
 	border-color: black;
 	border-collapse: separate;
 	background-color: white;
-	//width: 640px;
+	width: 640px;
 }
 
 table.header {
