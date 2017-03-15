@@ -1,3 +1,6 @@
+			<div class="title"><a href="/">Home</a></div>
+			<p>
+
         <?php
         $flag = false;
 	if(isset($_SESSION['rights'])){
