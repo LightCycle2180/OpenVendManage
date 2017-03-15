@@ -5,7 +5,7 @@ table.main {
 	border-color: black;
 	border-collapse: separate;
 	background-color: white;
-	//width: 640px;
+	width: 640px;
 }
 
 table.header {
@@ -14,7 +14,7 @@ table.header {
 	border-color: black;
 	border-style: inset;
 	color: white;	
-	font-size: 10px;
+	font-size: 11px;
 	font-weight:bold;
 	background-color: 000000;
 }
@@ -48,7 +48,7 @@ div.header {
 div.navigation {
 	font-family: arial;
 	color: black;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 div.footer {
@@ -61,7 +61,7 @@ div.footer {
 div.title {
 	font-family: arial;
 	color: gray;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
 	text-align: left;
 	vertical-align: top;
@@ -70,8 +70,8 @@ div.title {
 div.subtitle {
 	font-family: arial;
 	color: red;
-	font-style:italic;
-	font-size: 10px;
+	//font-style:italic;
+	font-size: 12px;
 }
 
 div.subunderline {
@@ -94,7 +94,7 @@ div.bigsubunderline {
 div.mainbody {
 	font-family: arial;
 	color: black;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 div.bigmainbody {
@@ -121,3 +121,23 @@ div.bigwarning {
 	font-weight: bold;
 	font-size: 12px;
 }
+
+.datatable{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.datatable td{ 
+		padding:7px; border:#000000 1px solid;
+	}
+	/* provide some minimal visual accomodation for IE8 and below */
+	.datatable tr{
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the ODD background rows  */
+	.datatable tr:nth-child(odd){ 
+		background: #A9A9A9;
+	}
+	/*  Define the background color for all the EVEN background rows  */
+	.datatable tr:nth-child(even){
+		background: #DCDCDC;
+	}

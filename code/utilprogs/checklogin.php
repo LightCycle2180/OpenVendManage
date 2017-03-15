@@ -8,15 +8,15 @@ session_start();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql="SELECT * FROM players WHERE username='$username' and password='$password'";
+$sql="SELECT * FROM users WHERE username='$username' and password='$password'";
 $query = mysql_query($sql) or die(mysql_error());
 
 $results = mysql_fetch_array( $query );
 
 if($results != null){
 	
-	$regname=$results['player_first'];
-	$pid=$results['playerid'];
+	$regname=$results['user_first'];
+	$pid=$results['user_id'];
 	$regrights=$results['accesslevel'];
 	
 //

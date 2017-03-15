@@ -21,7 +21,9 @@ die;
 ?>
 
 
-	<tr><td>Today is: <?php echo date("l F dS Y");	?></td>
+	<tr><td>
+	<?php is_beta(); ?>	
+	Today is: <?php echo date("l F dS Y");	?></td>
 	<td align="right">v0.0.1 </td></tr>
 
 	<tr><td>Local Time: <?php echo date("h:iA");?></td>
@@ -35,9 +37,5 @@ die;
 					}					
 					?>
 					
-	</td></tr>
-	<?php is_beta(); ?>
-		<h1>Welcome to Open Vend Manage!</h1>			
-
-
+	</td></tr>	
 </table>

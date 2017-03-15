@@ -17,7 +17,7 @@ function is_beta() {
 	if($beta==1)
 		{
 		//echo "success";
-		echo "<h5>THIS IS ALPHA SOFTWARE DO NOT USE AS PRODUCTION.<br>This has NOT been bug tested, and could start a nuclear war!</h5>" ;
+		echo "<h4>THIS IS ALPHA SOFTWARE DO NOT USE IN PRODUCTION. This has NOT been bug tested, and could start a nuclear war!</h4>" ;
 		}
 	}
 
